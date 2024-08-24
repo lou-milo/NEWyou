@@ -1,0 +1,290 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #a390ee, #f5b3c7);
+  background-image: url(https://www.shutterstock.com/image-photo/photo-woman-behind-glass-on-600nw-251646967.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.popup {
+  opacity: 0.7;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.animated{
+  color: #ff3d3d;
+  animation-name: zoomInOut;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5); /* Adjust the scale value as needed */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.popup-content {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
+
+.welcome-image {
+  width: 300px; /* Adjust the size as needed */
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.popup-content h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #ff3d3d;
+}
+
+.popup-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Style for background text on the welcome page */
+.background-text {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.5); /* Light and transparent */
+  font-weight: bold;
+  pointer-events: none; /* Ensure it doesn’t interfere with clicks */
+}
+
+/* Gradient background for the age popup */
+#age-popup .popup-content {
+  background: linear-gradient(to right, #ff777c, #333a3c); /* Pink to blue gradient */
+  color: white; /* Adjust text color for better contrast */
+}
+
+/* Age Popup Styles */
+#age-popup h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  background: linear-gradient(to right,  #ff0000,#000000); /* Blue to pink gradient */
+  background-clip: text; /* Makes the gradient text visible */
+  color: transparent;
+  transition: background 0.5s ease;
+}
+
+#age-popup:hover h2 {
+  background: linear-gradient(to right,  #ff0000,#000000); /* Pink to blue gradient on hover */
+  background-clip: text;
+  color: transparent;
+}
+
+/* Button Styles */
+button {
+  border: none; /* Remove default border */
+  padding: 15px 30px; /* Increase padding for larger buttons */
+  border-radius: 25px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Increase font size */
+  font-weight: bold;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Style YES button */
+#yes-btn {
+  background-color: #050505; /* Blue background */
+  color: white; /* White text */
+}
+
+#yes-btn:hover {
+  background-color: #ff0000; /* Darker blue on hover */
+  transform: scale(1.1); /* Increase size on hover */
+  box-shadow: 0 0 10px #090909; /* Add shadow effect */
+}
+
+/* Style NO button */
+#no-btn {
+  background-color: #d80202; /* Pink background */
+  color: white; /* White text */
+}
+
+#no-btn:hover {
+  background-color: #ff3d3d; /* Darker pink on hover */
+  transform: scale(1.1); /* Increase size on hover */
+  box-shadow: 0 0 10px #ff3d3d; /* Add shadow effect */
+}
+
+/* Container and Card Styles */
+.container {
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+  background-color: rgb(50, 48, 48);
+  opacity: 0.8;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-img {
+  padding: 10px 0px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 50px;
+  position: absolute;
+  top: 49px;
+  left: 30px;
+  transition: opacity 0.3s ease;
+}
+
+/* List styles */
+.options-list {
+  left: 20px;
+  position: absolute;
+  top: 60px;
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+  display: none; 
+  border: 1px solid #e77a7a;
+  border-radius: 5px;
+  background-color: #cd6b6b;
+  z-index: 1;
+}
+
+a:link {
+  color: white;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+}
+
+/* List item styles */
+.options-list li {
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  color: white;
+}
+
+.nav-img:hover{
+  opacity: 0.8;
+}
+
+.own-img{
+  width: 60px;
+  position: absolute;
+  border-radius: 50%;
+  right: 30px;
+  top: 30px;
+}
+
+.card {
+  background-color: rgb(0, 0, 0);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 50%;
+  border: 3px solid #6b4a4a;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 20px auto;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.price {
+  font-size: 28px;
+  margin: 15px 0;
+  font-weight: bold;
+  color: #939393;
+}
+
+/* Button Styles */
+#smash-btn {
+  background-color: transparent;
+  border-image: linear-gradient(to right, #ff0000, #070708);
+  border-image-slice: 1;
+  color: #ff0000;
+}
+
+#smash-btn:hover {
+  background-color: white;
+  color: rgb(255, 0, 0);
+  box-shadow: 0 0 10px #550a0a, 0 0 20px #7c0707;
+}
+
+#pass-btn {
+  background-color: transparent;
+  border-image: linear-gradient(to right, #0b060b, #000000);
+  border-image-slice: 1;
+  color: #ff0000;
+}
+
+#pass-btn:hover {
+  background-color: #ff0000;
+  color: rgb(0, 0, 0);
+  box-shadow: 0 0 10px #ff0000, 0 0 20px #ff9999;
+}
+
+#name{
+  color: white;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+
+.moving-text {
+  font-size: 24px;
+  color: #fff;
+  white-space: nowrap; /* Prevents text from wrapping to a new line */
+  position: absolute;
+  animation: moveText 10s linear infinite;
+  bottom: 35px;
+}
+
+/* Keyframes for moving the text from left to right */
+@keyframes moveText {
+  from {
+      transform: translateX(-100%); /* Start off-screen to the left */
+  }
+  to {
+      transform: translateX(100%); /* Move off-screen to the right */
+  }
+}
